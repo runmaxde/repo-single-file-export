@@ -27,7 +27,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v3
       with:
-        go-version: 1.18 # Update to match your required Go version
+        go-version:  1.22.1 # Update to match your required Go version
     - name: Build
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -v -o repo-single-file-export-${{ matrix.os }}-${{ matrix.arch }}${{ matrix.ext }}
